@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "7cbb5911-7f51-4359-855d-102feb4aa945": {
+      "ProjectGuid": "7cbb5911-7f51-4359-855d-102feb4aa945",
+      "DisplayName": "ARCoreImgChecker",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

@@ -1,0 +1,39 @@
+﻿<Window x:Class="ARCoreImgChecker.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ARCoreImgChecker"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800"
+        ResizeMode="NoResize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Button Name ="SelectPathToExe" Grid.Column="0" Grid.Row="0" Click="SelectPathToExeClick" Content="Выберите путь к файлу arcoreimg.exe"></Button>
+        <TextBlock Text="Качество изображения" Grid.Row="2" Grid.Column="0" Name="QualityText"/>
+        <Button Name ="SelectImagePathButton" Grid.Column="0" Grid.Row="1" Click="SelectImagePathClick" Content="Выберите изображение"></Button>
+        <Image Name ="ImageTargetSource" Source="/Frame 17.jpg" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="4"></Image>
+        <Grid Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2" Grid.RowSpan="4">
+            <ListBox x:Name ="ImageListBox">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Margin="5">
+                            <Image Width="100" Height="75" Source="{Binding Path=ImagePath}" />
+                            <TextBlock FontSize="16" Text="{Binding Path=ImageQuality}" HorizontalAlignment="Center" />
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </Grid>
+    </Grid>
+</Window>
