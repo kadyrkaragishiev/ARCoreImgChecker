@@ -19,14 +19,6 @@ namespace ARCoreImgChecker
         public MainWindow()
         {
             InitializeComponent();
-            //items = new ObservableCollection<ImageItem>
-            //{
-            //    new ImageItem{Id = 0, ImagePath = "/Frame 17.jpg",ImageQuality = "15"},
-            //    new ImageItem{Id = 1, ImagePath = "/Frame 17.jpg",ImageQuality = "15"},
-            //    new ImageItem{Id = 2, ImagePath = "/Frame 17.jpg",ImageQuality = "15"},
-            //    new ImageItem{Id = 3, ImagePath = "/Frame 17.jpg",ImageQuality = "15"}
-            //};
-            //ImageListBox.ItemsSource = items;
         }
         private void SelectPathToExeClick(Object sender, RoutedEventArgs e)
         {
@@ -51,10 +43,6 @@ namespace ARCoreImgChecker
                 {
                     CheckImageQuality(openFileDialog.FileNames);
                 }
-                //else if(openFileDialog.FileNames.Length == 1)
-                //{
-                //    CheckImageQuality();
-                //}
             }
         }
 
