@@ -19,6 +19,7 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
+        
         <Button Name ="SelectPathToExe" Grid.Column="0" Grid.Row="0" Click="SelectPathToExeClick" Content="Выберите путь к файлу arcoreimg.exe"></Button>
         <TextBlock Text="Качество изображения" Grid.Row="2" Grid.Column="0" Name="QualityText"/>
         <Button Name ="SelectImagePathButton" Grid.Column="0" Grid.Row="1" Click="SelectImagePathClick" Content="Выберите изображение"></Button>

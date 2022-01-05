@@ -46,24 +46,6 @@ namespace ARCoreImgChecker
             }
         }
 
-        private void CheckImageQuality()
-        {
-            string cmd = SelectPathToExe.Content + " eval-img --input_image_path=" + 
-                SelectImagePathButton.Content.ToString().Replace(@"/", @"\").Replace("JPG", "jpg");
-            using (Process p = new Process())
-            {
-                p.StartInfo.FileName = "powershell.exe";
-                p.StartInfo.Arguments = cmd;
-                p.StartInfo.CreateNoWindow = true;
-                p.StartInfo.RedirectStandardOutput = true;
-                p.StartInfo.UseShellExecute = false;
-                p.Start();
-                QualityText.Text = "Качество изображения : " + p.StandardOutput.ReadToEnd();
-                ImageTargetSource.Source = new ImageSourceConverter().ConvertFromString(SelectImagePathButton.Content.ToString()) as ImageSource;
-                p.WaitForExit();
-                p.Close();
-            }
-        }
         private void CheckImageQuality(string[] imageurls)
         {
             ImageListBox.Items.Clear();
