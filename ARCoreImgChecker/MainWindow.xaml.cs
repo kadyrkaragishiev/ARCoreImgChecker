@@ -32,7 +32,7 @@ namespace ARCoreImgChecker
         private void SelectImagePathClick(Object sender, RoutedEventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "Image files (*.png;*.jpeg)|*.png;*.jpeg|All files (*.*)|*.*";
+            openFileDialog.Filter = "Image files (*.png;*.jpeg;*.jpg)|*.png;*.jpeg;*.jpg;*.|All files (*.*)|*.*";
             openFileDialog.Multiselect = true;
             if (openFileDialog.ShowDialog() == true)
             {
@@ -48,7 +48,6 @@ namespace ARCoreImgChecker
 
         private void CheckImageQuality(string[] imageurls)
         {
-            ImageListBox.Items.Clear();
             List<ImageItem> imageItems = new List<ImageItem>();
             int inc = 0;
             foreach (string imageurl in imageurls)
